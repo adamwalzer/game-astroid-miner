@@ -1,0 +1,87 @@
+@import 'variables';
+@import 'mixins';
+@import 'fonts';
+
+@include reset;
+@include bootstrap-game;
+
+body {
+    @include text-shadow;
+    line-height: 1.2;
+    color: $text-color;
+}
+
+.skoash-game {
+    > .menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+    }
+}
+
+button {
+    &.close {
+        // @include nav-button(5, 50px, 50px);
+    }
+
+    &.next-screen,
+    &.prev-screen,
+    &.close-reveal {
+        display: block;
+        position: absolute;
+        bottom: -20px;
+        transform: scale(.5);
+        z-index: 10;
+        margin: 0;
+        width: 160px;
+        height: 120px;
+    }
+
+    &.close-reveal,
+    &.next-screen {
+        right: -15px;
+    }
+
+    &.prev-screen {
+        left: -15px;
+    }
+
+    &.quit-yes,
+    &.quit-no {
+        bottom: 10%;
+        width: 220px;
+        height: 110px;
+    }
+}
+
+.skoash-game.DEMO .screen .next-screen,
+.screen.COMPLETE .next-screen,
+.screen.REPLAY .next-screen {
+    transform: scale(.5);
+}
+
+.skoash-game {
+    $screen-pairs:
+    (title      bkg-3)
+    (quit       quit);
+    @include screen-background-pairs($screen-pairs);
+
+    &.MENU-quit {
+        .background.quit {
+            opacity: 1;
+        }
+    }
+
+    .background {
+        $background-pairs:
+        (bkg-1           'bkg-01.jpg')
+        (bkg-2           'bkg-02-galaxypano.jpg')
+        (bkg-3           'bkg-03.jpg')
+        (bkg-4           'bkg-04.jpg')
+        (bkg-5           'bkg-05.jpg')
+        (bkg-6           'bkg-06.jpg')
+        (bkg-7           'bkg-07.jpg');
+        @include background-pairs($background-pairs);
+    }
+}
