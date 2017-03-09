@@ -34,17 +34,17 @@ button {
         transform: scale(.5);
         z-index: 10;
         margin: 0;
-        width: 160px;
+        width: 165px;
         height: 120px;
     }
 
     &.close-reveal,
     &.next-screen {
-        right: -15px;
+        right: -25px;
     }
 
     &.prev-screen {
-        left: -15px;
+        left: -25px;
     }
 
     &.quit-yes,
