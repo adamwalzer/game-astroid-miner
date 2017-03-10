@@ -1,8 +1,8 @@
 {
     "id": "asteroid-miner",
     "version": 1,
-    "skoash": "1.1.5",
-    "head_injection": "",
+    "skoash": "1.1.6",
+    "head_injection": "<link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet'>",
     "dimensions": {
         "width": 960,
         "height": 540

@@ -3,7 +3,7 @@
 @import 'fonts';
 
 @include reset;
-@include bootstrap-game;
+@include bootstrap-game('Fjalla One');
 
 body {
     @include text-shadow;
@@ -64,6 +64,7 @@ button {
 .skoash-game {
     $screen-pairs:
     (title      bkg-3)
+    (welcome    bkg-1)
     (quit       quit);
     @include screen-background-pairs($screen-pairs);
 

@@ -1,19 +1,25 @@
 import config from './config';
 
+import content from './content';
+
 import Loader from 'shared/components/loader/0.1';
 
 import iOSScreen from 'shared/components/ios_splash_screen/0.1';
 
 import TitleScreen from './components/title_screen';
+import WelcomeScreen from './components/welcome_screen';
+
 import QuitScreen from './components/quit_screen';
 
 skoash.start(
     <skoash.Game
         config={config}
+        content={content}
         loader={<Loader />}
         screens={[
             iOSScreen,
             TitleScreen,
+            WelcomeScreen,
         ]}
         menus={{
             quit: QuitScreen,
@@ -49,6 +55,7 @@ skoash.start(
             <skoash.Image className="hidden" src={`${CMWN.MEDIA.IMAGE}bkg-05.jpg`} />,
             <skoash.Image className="hidden" src={`${CMWN.MEDIA.IMAGE}bkg-06.jpg`} />,
             <skoash.Image className="hidden" src={`${CMWN.MEDIA.IMAGE}bkg-07.jpg`} />,
+            <skoash.Image className="hidden" src={`${CMWN.MEDIA.SPRITE}go-play-replay-button.png`} />,
             <div className="background bkg-1" />,
             <div className="background bkg-2" />,
             <div className="background bkg-3" />,
