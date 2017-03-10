@@ -1,5 +1,4 @@
-export default function (props, ref, key) {
-    let content = _.defaults({}, props.content);
+export default function (props, ref, key, content = {}) {
     return (
         <skoash.Screen
             {...props}
